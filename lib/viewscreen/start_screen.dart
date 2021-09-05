@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/viewscreen/fontdemo_screen.dart';
 
 import 'buttondemo_screen.dart';
 import 'image_screen.dart';
@@ -114,6 +115,14 @@ class StartScreen extends StatelessWidget {
           
           child: Text(
             'Button Demo',
+             style: Theme.of(context).textTheme.button,
+          ),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.pushNamed(context, FontDemoScreen.routeName),
+          
+          child: Text(
+            'Font Demo',
              style: Theme.of(context).textTheme.button,
           ),
           ),

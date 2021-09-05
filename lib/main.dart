@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lesson1/viewscreen/buttondemo_screen.dart';
+import 'package:lesson1/viewscreen/fontdemo_screen.dart';
 import 'package:lesson1/viewscreen/image_screen.dart';
 import 'package:lesson1/viewscreen/materialdesign_screen.dart';
 import 'package:lesson1/viewscreen/start_screen.dart';
@@ -48,6 +49,14 @@ class Lesson1App extends StatelessWidget {
               ),
           ),
         ),
+        textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          primary: Colors.yellow,
+          textStyle: TextStyle(
+            fontSize: 28.0,
+          ),
+        ),
+        ),
       ),
       initialRoute: StartScreen.routeName,
       routes: {
@@ -55,6 +64,7 @@ class Lesson1App extends StatelessWidget {
         MaterialDesignScreen.routeName: (context) => MaterialDesignScreen(),
         ImageScreen.routeName: (context) => ImageScreen(),
         ButtonDemoScreen.routeName: (context) => ButtonDemoScreen(),
+        FontDemoScreen.routeName: (context) => FontDemoScreen(),
   },
     );
   }
