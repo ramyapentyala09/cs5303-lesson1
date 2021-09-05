@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FontDemoScreen extends StatelessWidget {
-
   static const routeName = '/fontdemoScreen';
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
