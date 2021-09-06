@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lesson1/viewscreen/fontdemo_screen.dart';
+import 'package:lesson1/viewscreen/rowcol_screen.dart';
 
+import 'businesscard_screen.dart';
 import 'buttondemo_screen.dart';
 import 'image_screen.dart';
 import 'materialdesign_screen.dart';
@@ -89,44 +91,66 @@ class StartScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          Text(
-            'Choose a menu to navigate', style: Theme.of(context).textTheme.headline5,
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment. center,
+          
+          children: [
+            Text(
+              'Choose a menu to navigate', style: Theme.of(context).textTheme.headline5,
+              ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, MaterialDesignScreen.routeName);
+            },
+             child: Text(
+               'Material Design Style Demo', 
+               style: Theme.of(context).textTheme.button,
+             )),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, ImageScreen.routeName),
+            
+            child: Text(
+              'Image Demo',
+               style: Theme.of(context).textTheme.button,
             ),
-          ElevatedButton(
-            onPressed: (){
-              Navigator.pushNamed(context, MaterialDesignScreen.routeName);
-          },
-           child: Text(
-             'Material Design Style Demo', 
-             style: Theme.of(context).textTheme.button,
-           )),
-          ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, ImageScreen.routeName),
-          
-          child: Text(
-            'Image Demo',
-             style: Theme.of(context).textTheme.button,
-          ),
-          ),
-          ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, ButtonDemoScreen.routeName),
-          
-          child: Text(
-            'Button Demo',
-             style: Theme.of(context).textTheme.button,
-          ),
-          ),
-          ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, FontDemoScreen.routeName),
-          
-          child: Text(
-            'Font Demo',
-             style: Theme.of(context).textTheme.button,
-          ),
-          ),
-      ],
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, ButtonDemoScreen.routeName),
+            
+            child: Text(
+              'Button Demo',
+               style: Theme.of(context).textTheme.button,
+            ),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, FontDemoScreen.routeName),
+            
+            child: Text(
+              'Font Demo',
+               style: Theme.of(context).textTheme.button,
+            ),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, RowColDemoScreen.routeName),
+            
+            child: Text(
+              'Row/Col Demo',
+               
+            ),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, BusinessCardScreen.routeName),
+            
+            child: Text(
+              'My Business Card',
+               
+            ),
+            ),
+        ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

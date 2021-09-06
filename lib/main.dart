@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/viewscreen/businesscard_screen.dart';
 import 'package:lesson1/viewscreen/buttondemo_screen.dart';
 import 'package:lesson1/viewscreen/fontdemo_screen.dart';
 import 'package:lesson1/viewscreen/image_screen.dart';
 import 'package:lesson1/viewscreen/materialdesign_screen.dart';
+import 'package:lesson1/viewscreen/rowcol_screen.dart';
 import 'package:lesson1/viewscreen/start_screen.dart';
 
 void main(){
@@ -23,6 +25,7 @@ class Lesson1App extends StatelessWidget {
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
         brightness: Brightness.dark,
+        fontFamily: 'LobsterTwo',
         primaryColor: Colors.red[800],
         textTheme: TextTheme(
           headline1: TextStyle(
@@ -65,6 +68,9 @@ class Lesson1App extends StatelessWidget {
         ImageScreen.routeName: (context) => ImageScreen(),
         ButtonDemoScreen.routeName: (context) => ButtonDemoScreen(),
         FontDemoScreen.routeName: (context) => FontDemoScreen(),
+        RowColDemoScreen.routeName: (context) => RowColDemoScreen(),
+        BusinessCardScreen.routeName: (context) => BusinessCardScreen(),
+      
   },
     );
   }

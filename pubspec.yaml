@@ -48,6 +48,7 @@ flutter:
   assets:
     - images/dog.png
     - images/paw.png
+    - images/ramya.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -60,14 +61,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: LobsterTwo
-  #     fonts:
-  #       - asset: fonts/LobsterTwo-Regular.ttf
-  #       - asset: fonts/LobsterTwo-Italic.ttf
-  #         style: italic
-          - asset: fonts/LobsterTwo-Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: LobsterTwo
+      fonts:
+        - asset: fonts/LobsterTwo-Regular.ttf
+        - asset: fonts/LobsterTwo-Italic.ttf
+          style: italic
+        - asset: fonts/LobsterTwo-Bold.ttf
+          weight: 700
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
